@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pay.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <div class="left">
+                <img src="multimedia/logosinletra.svg" class="logocine">
+            </div>
+            <ul class="right">
+                <a href="index.html"><li class="promo">Promos</li></a>
+                <a href="index.html"><li class="pelis">Películas</li></a>
+                <a href="index.html"><li class="billetes">Boletos</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="izq">
+        <!-- Formulario con 3 campos -->
+        <form>
+            <p class="subtitulo">Datos del Usuario</p>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </form>
+    </div>
+
+    <div class="drc">
+        <p class="subtitulo">Metodo de pago</p>
+        <!-- Divs con checkboxes -->
+        <div>
+            <input type="radio" id="checkbox1" name="checkbox">
+            <label for="checkbox1">Tarjeta de credito</label>
+            <img src="imagenes/visa.png" class="imagenes">
+        </div>
+
+        <div>
+            <input type="radio" id="checkbox2" name="checkbox">
+            <label for="checkbox2">Efectivo en el lugar</label>
+            <img src="imagenes/dinero.png" class="imagenes">
+        </div>
+
+        <div>
+            <input type="radio" id="checkbox3" name="checkbox">
+            <label for="checkbox3">Paypal</label>
+            <img src="imagenes/paypal.png" class="imagenes">
+        </div>
+    </div>
+
+
+    <a href="index.html"><button id="boton"> Comprar</button></a>
+    
+
+    <script src="pay.js"></script>
+</body>
+</html>

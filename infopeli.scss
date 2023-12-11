@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Helvetica'; 
+    src: url('fuenteHelvetica/HelveticaNowText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaBold'; 
+    src: url('fuenteHelvetica/HelveticaNowText-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaThin'; 
+    src: url('fuenteHelvetica/HelveticaNowText-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaCursiva'; 
+    src: url('fuenteHelvetica/HelveticaNowText-ExtLtIta.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    background-color: rgb(196, 0, 0);
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.peliculatitulo{
+    font-family: 'HelveticaBold';
+}
+
+.logocine {
+    height: 60px;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+}
+
+.promo,
+.pelis,
+.billetes {
+    font-family: 'Helvetica';
+    margin-right: 30px;
+    margin-left: 30px;
+}
+a {
+    text-decoration: none; 
+    color: white; 
+    transition: transform 0.2s ease-in-out;
+}
+
+
+a:hover {
+    transform: scale(1.1); 
+}
+
+.left,
+.right {
+    margin: 20px 40px;
+}
+
+body {
+    font-family: 'HelveticaThin';
+    margin: 0;
+    background-color: black;
+    background-size: contain;
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+.text-container {
+    max-width: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 200px;
+    margin-left: 300px;
+    overflow-wrap: break-word;
+}
+
+
+
+.h1{
+    font-family: 'HelveticaBold';
+}
+
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* O cualquier otro estilo que desees */
+  
+    /* Establece el tamaño y posición de la imagen */
+    width: 100%;
+    height: auto;
+  }
+  
+  .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+  }
+  
+
+#boton {
+    margin-top: 80px;
+    margin-left: 300px;
+    padding: 20px 50px;
+    border-radius: 100px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 767px) {
+        /* HEADER*/
+        body {
+            text-align: center; 
+            background:none;
+            background-color:rgb(255, 255, 255);
+            
+        }
+        .left,
+        .right {
+            margin: 10px;
+        }
+    
+        .header {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+        }
+    
+        .logocine {
+            display: none;
+        }
+    
+    
+        .izquierda {
+            display: none;
+    
+        }
+    
+        .right {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            color: white;
+            font-size: 20px;
+            margin-right: 8%;
+            margin-top: 10px;
+            text-align: center;
+        }
+    
+        .right ul {
+            padding: 0; /* Elimina el relleno predeterminado del ul */
+            margin: 0; /* Elimina el margen predeterminado del ul */
+        }
+    
+        .right li {
+            margin: 10px;
+        }
+    .text-container {
+        
+        color: rgb(255, 255, 255);
+        margin-top: 30%;
+        margin-left: 300px;
+ 
+    }
+    .rigth{
+        font-family: 'Helvetica';
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        background-color: black;
+     
+    }
+    
+    .text-container {
+        max-width: 100%;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    #boton {
+        margin-left: 10px;
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+    .text-container {
+        color: rgb(255, 255, 255);
+        margin-top: 30%;
+        margin-left: 300px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        background-color: black;
+    }
+
+    .text-container {
+        font-family: 'Helvetica';
+        margin-top: 20%;
+        max-width: 100%;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    #boton {
+        margin-left: 10px;
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+
+    .image {
+        display: none; /* Oculta la imagen en dispositivos móviles */
+    }
+}
+
+

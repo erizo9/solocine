@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Helvetica'; 
+    src: url('fuenteHelvetica/HelveticaNowText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaBold'; 
+    src: url('fuenteHelvetica/HelveticaNowText-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaThin'; 
+    src: url('fuenteHelvetica/HelveticaNowText-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaCursiva'; 
+    src: url('fuenteHelvetica/HelveticaNowText-ExtLtIta.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos base */
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgb(0, 0, 0), rgb(48, 48, 48));
+    font-family: 'Helvetica';
+}
+
+/* Header */
+.header {
+    background-color: rgb(196, 0, 0);
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logocine {
+        height: 60px;
+    }
+
+    .right {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        color: white;
+        font-size: 20px;
+
+        .promo,
+        .pelis,
+        .billetes {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+    }
+}
+
+/* Página principal */
+.principal {
+    height: 100vh;
+    height: calc(100vh - 90px);
+    overflow-y: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent),
+              url('multimedia/cinefondodegradado.png') center/cover no-repeat;
+    background-position: right center;
+
+    .home {
+        background-repeat: no-repeat;
+        background-size: 60vh;
+        background-position: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+
+        .izquierda {
+            margin-left: 12%;
+        }
+
+        .derecha {
+            .textopresentacion {
+                margin-left: 20%;
+
+                .f1 {
+                    color: white;
+                    font-family: 'HelveticaCursiva';
+                    font-size: 100px;
+                    margin-bottom: -28px;
+                    margin-left: 1%;
+                }
+
+                .f2 {
+                    color: white;
+                    font-family: 'HelveticaBold';
+                    font-size: 110px;
+                    margin: 0;
+                }
+
+                .f3 {
+                    color: white;
+                    font-family: 'HelveticaThin';
+                    font-size: 28px;
+                    margin: 0;
+                    margin-left: 1%;
+                    width: 65%;
+                }
+            }
+
+            .izquierda img {
+                height: 600px;
+            }
+
+            .botonhome {
+                margin-left: 1%;
+                margin-top: 3%;
+                font-family: 'HelveticaBold';
+                display: inline-block;
+                padding: 15px 30px;
+                border-radius: 30px;
+                background-color: red;
+                color: black;
+                text-decoration: none;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Cartelera */
+.cartelera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 80px;
+
+    .titulocartelera {
+        font-size: 20px;
+        margin-left: 10%;
+        color: white;
+        text-align: left;
+    }
+
+    .subtitulo1cartelera {
+        font-family: 'HelveticaThin';
+        margin-left: 10%;
+        color: white;
+        text-align: left;
+        font-size: 250%;
+        margin-bottom: 0%;
+    }
+
+    .linearoja {
+        margin-left: 10%;
+        width: 80%;
+        height: 6px;
+        background-color: darkred;
+    }
+
+    .peliculas {
+        img {
+            width: 13%;
+            margin: 30px;
+            border-radius: 10px;
+        }
+    }
+
+    #ticketForm {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+    body {
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        margin: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .logocine {
+        display: none;
+    }
+
+    .principal {
+        height: 100vh;
+        height: calc(100vh - 90px);
+        overflow-y: hidden;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent),
+                  url('multimedia/cinefondodegradado.png') center/cover no-repeat;
+        background-position: right center;
+    }
+
+    .izquierda {
+        display: none;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        color: white;
+        font-size: 20px;
+        margin-right: 8%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .right ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .right li {
+        margin: 10px;
+    }
+
+    .textopresentacion {
+        margin: 0;
+        margin-top: 40%;
+        text-align: center;
+    }
+
+    .f1 {
+        font-size: 60px;
+        margin-bottom: -23px;
+        margin-left: 1%;
+    }
+
+    .f2 {
+        font-size: 65px;
+        margin: 0;
+    }
+
+    .f3 {
+        font-size: 14px;
+        margin: 0;
+        margin-left: 1%;
+        width: 90%;
+    }
+
+    .botonhome {
+        margin: 10px 0;
+        display: inline-block;
+    }
+
+    .home {
+        background-position: center;
+    }
+
+    .izquierda img {
+        width: 100%;
+    }
+
+    /*ESTILOS PARA CARTELERA*/
+
+    .cartelera {
+        margin: 0;
+
+        .peliculas {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 10px;
+
+            img {
+                width: 30%;
+                max-width: calc(48% - 10px);
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

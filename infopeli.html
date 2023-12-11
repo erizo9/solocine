@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="infopeli.css">
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <div class="left">
+                <img src="multimedia/logosinletra.svg" class="logocine">
+            </div>
+            <ul class="right">
+                <a href="index.html"><li class="promo">Promos</li></a>
+                <a href="index.html"><li class="pelis">Películas</li></a>
+                <a href="index.html"><li class="billetes">Boletos</li></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="movieDetails" class="movieDetails">
+        <!-- Contenedor para texto e imagen -->
+        <div class="text-image-container">
+            <!-- Aquí puedes mostrar la información de la película, incluida la imagen -->
+            <div id="movieImage" class="image-container">
+                <div class="gradient-overlay"></div>
+                <img src="/imagenes/tu-imagen.jpg" class="image" alt="Nombre de la película">
+            </div>
+            <div class="text-container">
+                <h1 id="movieTitle">Título de la Película</h1>
+                <p id="movieDescription">Descripción de la película.</p>
+                <!-- Otros detalles de la película... -->
+            </div>
+        </div>
+        <button id="boton">Comprar</button>
+    </div>
+
+    <script src="infopeli.js"></script>
+</body>
+</html>
